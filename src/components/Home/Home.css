@@ -1,5 +1,5 @@
 .home-container{
-    background-color: rgb(215, 212, 212); width: 100%; height: auto; 
+    background-color: rgb(215, 212, 212); width: 100%; height: auto; min-height: 100vh; 
 }
 
 
