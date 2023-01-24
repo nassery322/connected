@@ -1,0 +1,72 @@
+.profilebackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0 );
+  }
+  
+  .profile-modal {
+    position: fixed;
+    top: 15vh;
+    left: 65%;
+    width: 300px  ;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+    height:auto;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  @media (max-width:930px){
+    .profile-modal{
+      left: 60%;
+    }
+  }
+
+  @media (max-width:830px){
+    .profile-modal{
+      left: 57%;
+    }
+  }
+  @media (max-width:730px){
+    .profile-modal{
+      left: 53%;
+    }
+  }
+
+  @media (max-width:670px){
+    .profile-modal{
+      left: 46%;
+    }
+  }
+  @media (max-width:630px){
+    .profile-modal{
+      left:23%; top:25vh;
+    }
+  }
+
+  @media (max-width:530px){
+    .profile-modal{left: 0; height: 56vh;
+      width: 100% !important; top: 20vh;
+    }
+  }
+  /* @media (max-width:430px){
+    .profile-modal{
+      left:10%; top:20vh;
+    }
+    .backdrop{
+      background-color: rgba(0, 0, 0, 0.75 );
+    }
+  }
+  @media (max-width:370px){
+    .profile-modal{
+      left:0%; top:20vh;
+    }
+    
+  } */

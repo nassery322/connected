@@ -1,0 +1,48 @@
+.user-photo {
+width: 45px; border-radius: 50%; height: 45px;
+}
+
+.user-photo img{
+    width: 100%; border-radius: inherit; height: 100%;
+}
+.user-item{
+    display: flex; align-items: center;  border-bottom: 1px solid #ccc; padding: 6px;  transition: 1s all;
+}
+.user-name{
+}
+.chat-user i{
+    display: none;  cursor: pointer; margin-left: 5px;
+}
+.user-item:hover i{
+display: block;
+}
+.name-chat{
+    margin-left: 10px; display: flex; align-items: center; justify-content: space-between; 
+}
+.back{
+    width: 15%; border: none; font-size: 1.2rem; height: 7vh; outline: none;
+}
+.back-btn{
+    width: 100%; border: none; height: 100%; background-color: white; transition: .3s all; border-radius: 40%;
+}
+.photo-name{
+    display: flex; align-items: inherit; width: 80%; 
+}
+.photo-name .user-name{
+    margin-left: 20px;
+}
+.user-item-chat-screen{
+    display: flex; align-items:center;  cursor: pointer;
+} 
+.back-btn:active{
+    background-color: rgb(160, 157, 157);
+}
+.user-item-chat{
+    border-bottom: .5px solid; display: flex; align-items: center; padding:10px;   transition: .3s all; cursor: pointer;
+}
+.user-item-chat .user-name{
+    margin-left: 10px;
+}
+.user-item-chat:hover{
+    background-color: rgb(182, 50, 50); color:white;
+}

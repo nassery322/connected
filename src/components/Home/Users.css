@@ -1,0 +1,70 @@
+.users-tab{
+    width: 17.5%; background-color: none; border-right: 1px solid #ccc; height: 85vh; background-color: white; animation-name: usersAnime; animation-duration: .5s; animation-iteration-count: 1; animation-fill-mode: forwards; float: left; font-size: .92rem;
+
+}
+.users-header{
+    font-size: 1.1rem; color: black; border-bottom: solid 1px #ccc; box-shadow:inset; margin-bottom: 10px;     
+ height: 2rem; text-indent: 5px;  
+
+}
+
+
+ @keyframes usersAnime {
+    from{
+          opacity: 0; transform: translateX(-100%); 
+    }
+    to{
+         opacity: 1;  transform: translateX(0%); 
+    }
+}
+
+
+@media (max-width:1230px){
+    .users-header{
+        font-size: 1rem;
+    }
+    .users-tab{
+        width: 20%; font-size: .9rem;
+    }
+}
+
+@media (max-width:1030px){
+    .users-header{
+        font-size: .9rem;
+    }
+    .users-tab{ 
+        width: 22%; font-size: .8rem;
+    }
+}
+
+@media (max-width:916px){
+   
+    .users-tab{ 
+        width: 23%; 
+    }
+}
+@media (max-width:880px){
+   
+    .users-tab{ 
+        width: 25%; 
+    }
+}
+@media (max-width:810px){
+    
+    .users-tab{ 
+        width: 27%; 
+    }
+}
+
+@media (max-width:760px){
+ 
+    .users-tab{ 
+        width: 29%; 
+    }
+}
+@media (max-width:690px){
+    
+    .users-tab{ 
+        display: none;
+    }
+}

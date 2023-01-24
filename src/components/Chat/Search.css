@@ -1,0 +1,30 @@
+.search-btn{
+  width: 90%; border: 1.5px solid; background-color: rgb(255, 255, 255); text-align: left; text-indent: 10px; border-radius: 18px; font-size: 1.1rem; margin-bottom: 10px; padding: 4px; margin-left: auto; margin-right: auto; display: block;
+}
+.search-btn:active{
+  background-color: rgb(255, 255, 255);
+}
+.search-form{
+width: 100%; border: none; height: 2.5rem; display: flex; align-items: center; padding: 4px;
+}
+.search-form i{
+  border: none; font-size: 1.3rem;
+}
+.search-form input{
+  width: 92%; border: none; outline: none; margin-left: 8px;
+}
+.suggested{
+  margin-bottom: 8px; text-indent: 4px;
+}
+
+.refresh{
+  background-color: rgb(66, 143, 220); color: white; border:none; text-align: center;
+} 
+
+.refresh:active{
+  background-color:rgb(63, 135, 208) ; 
+}
+.search-results{
+  overflow-y: auto; height: 75vh;
+}
+

@@ -1,0 +1,21 @@
+.profile{
+    display: flex; flex-direction: column;  text-align: center; border:none blue; outline: none; width: 100%;
+}
+.profile-photo{
+    width: 120px; border: none; margin:20px auto 10px auto; border-radius: 50%; height: 120px; 
+}
+.profile-name{
+    font-size: 1.2rem; color:black; margin-bottom: 10px; font-weight: 400;  text-transform: capitalize;
+}
+.profile-photo img{
+    width: 100%; border-radius: 50%; height: 100%;
+}
+.buttons{
+    margin:10px auto; display: flex; flex-direction: column; width: 100%;
+}
+.mannage-btn{
+    width: 100%; margin-bottom: 10px; height: 3rem; border-collapse: collapse;  border:1px solid #ccc; padding:5px;
+}
+.signout-btn{
+    width: 50%; margin:0 auto; height: 2.5rem; border:1px black; padding: 10px; color:rgb(37, 35, 35)
+}

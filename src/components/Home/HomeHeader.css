@@ -1,0 +1,51 @@
+.home-header{
+    display: flex; align-items: center; background-color: white;  justify-content: space-around; font-size: 1.2rem;
+padding-top: 20px; 
+}
+.home-header a{
+    text-decoration: none;
+}
+.home-logo{
+    animation-name: homeAnime; animation-fill-mode: forwards; animation-duration: 1s; cursor: pointer;
+}
+.home-logo img{
+    border: none;  height: 100px; 
+}
+.user-icon{
+    border: solid; width: 55px; border-radius: 50%; height: 100%; display: flex; justify-content: center; align-items: center;
+}
+.home-nav{ 
+  border: none; width: 5%; height: 55px;
+
+}
+.user-icon img{
+    width: 100%; height: 100%; border-radius: 50%;
+}
+
+
+
+
+@keyframes homeAnime {
+    from{
+          opacity: 0; transform: translateX(-100%); 
+    }
+    to{
+         opacity: 1;  transform: translateX(0%); 
+    }
+}
+/* padding-right: 30px; padding-left:20px; padding-top: 5px; */
+
+@media (max-width:500px){
+    .home-header{
+        padding-right: 33px;
+    }
+    .home-logo img{
+        width: 150px; height: 70px;
+    }
+    .user-icon{
+        width: 50px;
+    }
+    .home-nav{
+        height: 50px;
+    }
+}

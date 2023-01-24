@@ -1,0 +1,132 @@
+
+.home-body{
+    box-sizing: border-box; 
+}
+
+.home-content{
+    width:75%; background-color: white; margin:30px auto; height:80vh; display: flex; align-items: center;
+}
+.home-img{ 
+    width:50%; height: 100%; background-image: url(../../assets/messaging.jpg); background-size:100%;   background-position-y: 50px; background-repeat:no-repeat; display: flex; align-items: center;  justify-content: center; flex-direction: column;     
+}
+
+
+.home-form{
+    width: 50%; height: 100%; padding:20px; overflow-y: auto; 
+}
+.home-form input{
+    width: 100%; height: 3rem;  background-color: rgb(229, 227, 227); border: none; outline: none;
+}
+.login-form input{
+    margin-bottom: 8%;
+}
+.signup-form input{
+    margin-bottom: 5%;
+}
+.error{
+    color:red; 
+}
+.form-header{
+    margin:0 auto; width:100%; font-size: 2rem; font-weight: 600; margin-bottom: 5%; display: flex; justify-content: space-evenly;
+}
+
+.submit-btn{
+    width: 100%; height: 3rem;
+}
+#remember{
+    width: 12px !important; border: solid;
+}
+[type="checkbox"]
+{
+    vertical-align:middle;
+}
+.header{
+    cursor: pointer;
+}
+.underLine{
+    border-bottom: 3px solid rgb(222, 90, 90);
+}
+
+/* For Firefox */
+scrollbar {
+    width: 10px;
+    background: #F5F5F5;
+    border-radius: 10px;
+  }
+  
+  scrollbar-thumb {
+    background: #BBB;
+    border-radius: 10px;
+  }
+  
+  scrollbar-thumb:hover {
+    background: #999;
+  }
+  
+  /* For Chrome, Safari, and Edge */
+  ::-webkit-scrollbar {
+    width: 10px;
+    background: #F5F5F5;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #BBB;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+  }
+  
+
+  @keyframes homeAnime {
+    from{
+          opacity: 0; transform: translateX(-100%); 
+    }
+    to{
+         opacity: 1;  transform: translateX(0%); 
+    }
+}
+
+    /* @media (max-width:1220px){
+        .home-content{
+            height: 65vh;
+        }
+    }
+    @media (max-width:1070px){
+        .home-content{
+            height: 60vh;
+        }
+    }
+
+    @media (max-width:920px){
+        .home-content{
+            height: 55vh;
+        }
+    } */
+
+@media (max-width:750px){
+    .home-content{ font-size: 1rem;
+        flex-direction: column;  height: 110vh;
+    }
+    .home-img{
+        width: 100%; border: none; height:90vh ;  background-size: 70%; background-position-x: 50%; background-position-y: 30%;
+    }
+    .home-form{
+        width: 100%; height: 100%;
+    }
+}
+@media (max-width:580px){
+    .home-img{
+        background-size: 90%;
+    }
+}
+@media(max-width:500px){
+    .home-form{
+        height: 100%;
+    }
+    .home-content{
+        width: 100%; height: 125vh; margin-top: 0px !important;
+    }
+}
