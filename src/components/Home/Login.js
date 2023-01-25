@@ -34,9 +34,8 @@ async function submitHandler(event){
           emailRef.current.value,
           passwordRef.current.value
         );
-
-        
-      } catch (error) {
+window.location.reload();
+        } catch (error) {
         setError('Invalid E-Mail address or password!')
       }
       setIsLoading(false)

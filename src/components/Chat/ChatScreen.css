@@ -8,7 +8,7 @@
     height: 10vh; position: sticky; 
 }
 .chat-form{
-    width: 100%;  
+    width: 100%;  height: 10vh;
 }
 .chat-form input{
     width: 88%; height: 3rem;  background-color: rgb(229, 227, 227); border: none; outline: none; 
@@ -24,9 +24,10 @@
 
 @media (max-width:530px){
     .chat-body{
-        height: 70vh;
+        height: 80vh;
     }
-    .chat-screen{width: 100%; height: 90vh !important;}
+    .chat-screen{width: 100%; height: 100vh !important;}
+
 }
 @media(max-height:300px){
     .chat-screen{
