@@ -15,14 +15,14 @@ const [refresh, setRefresh] = useState(false)
 
     async function fetchData(e){
         setIsLoading(true)
-        const response = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${auth.currentUser.uid}/chats.json`)
+        const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata/${auth.currentUser.uid}/chats.json`)
         const data = await response.json();
     let loadedData = [];
      for(const key in data){
          loadedData.push({id:data[key].id})
      }
 
-    const grabChats = await fetch('https://connected-c86f2-default-rtdb.firebaseio.com/userdata.json');
+    const grabChats = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata.json`);
         const chatData = await grabChats.json()
         let chats = [];
         for (const key in chatData) {

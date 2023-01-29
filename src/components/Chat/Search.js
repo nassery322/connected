@@ -9,7 +9,7 @@ const Search = props =>{
    
     
     async function fetchData(){
-        const response = await fetch('https://connected-c86f2-default-rtdb.firebaseio.com/userdata.json');
+        const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata.json`);
         const data = await response.json()
         let loadedData = [];
         

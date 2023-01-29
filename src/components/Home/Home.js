@@ -19,7 +19,7 @@ const Home = props =>{
    async function userDataHandler(data){
         const sharedId = `${data.id}${auth.currentUser.uid}`
     try {
-        const response = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/chatdata/${sharedId}.json`);
+        const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/chatdata/${sharedId}.json`);
         const data = await response.json();
         if (Object.keys(data).length > 0) {
             setChatExist(true)
@@ -40,7 +40,7 @@ const Home = props =>{
 
     }
    async function userChats(e){
-        const response1 = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${e}/chats.json`, {
+        const response1 = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata/${e}/chats.json`, {
   method: 'GET'
 });
 const chats = await response1.json();

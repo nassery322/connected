@@ -75,7 +75,7 @@ async function applyHandler(event){
           });
     }
     
-    const response = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${userId}.json`)
+    const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata/${userId}.json`)
     const data = await response.json();
     for(const key in data){
         if(imageURL){
@@ -89,7 +89,7 @@ async function applyHandler(event){
             }
     }
     
-        await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${userId}.json`, {
+        await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata/${userId}.json`, {
         method : 'PATCH',
         body: JSON.stringify(data)
     })

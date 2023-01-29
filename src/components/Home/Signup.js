@@ -128,7 +128,7 @@ useEffect( ()=>{
           formValues.password,
         );
         const imageFile = imageURL? imageURL : 'https://firebasestorage.googleapis.com/v0/b/connected-c86f2.appspot.com/o/images%2Fblank-profile-picture.jpg?alt=media&token=4e11a9f8-f563-4e6d-ba92-3869bebd6868';
-        const response = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${user.user.uid}.json`, {
+        const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata/${user.user.uid}.json`, {
           method: 'POST',
           body: JSON.stringify({ name: formValues.name, lastname: formValues.lastname, file: imageFile}),
           headers: { 'Content-Type': 'application/json' }

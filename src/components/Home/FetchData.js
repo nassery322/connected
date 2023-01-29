@@ -2,7 +2,7 @@
 
 
 export default async function fetchData(e){
-    const response = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${e}.json`)
+    const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata/${e}.json`)
     const data = await response.json();
 
 const loadedData = [];

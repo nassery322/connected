@@ -14,7 +14,7 @@ const ChatScreen = props =>{
 const chatRef = useRef();
 const sharedId = props.chatExist? `${props.userData.id}${auth.currentUser.uid}` : `${auth.currentUser.uid}${props.userData.id}`
 async function getChatData(id){
-      const response = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/chatdata/${id}.json`);
+      const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/chatdata/${id}.json`);
     const data = await response.json()
     let loadedData = []
     for(const key in data){
@@ -43,7 +43,7 @@ async function getChatData(id){
       
       const timeString = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
       if(chatRef.current.value.trim().length > 0){
-          const response = await fetch(`https://connected-c86f2-default-rtdb.firebaseio.com/chatdata/${sharedId}.json`,{
+          const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/chatdata/${sharedId}.json`,{
           method: 'POST',
           body : JSON.stringify({
               sender: auth.currentUser.uid,
@@ -57,8 +57,8 @@ chatRef.current.value = '';
 const responseData = await response.json()
 
 
-const selectedUser = `https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${props.userData.id}/chats.json`
-const currentUser = `https://connected-c86f2-default-rtdb.firebaseio.com/userdata/${auth.currentUser.uid}/chats.json`
+const selectedUser = `${process.env.REACT_APP_DATABASE_URL}/userdata/${props.userData.id}/chats.json`
+const currentUser = `${process.env.REACT_APP_DATABASE_URL}/userdata/${auth.currentUser.uid}/chats.json`
 
 const response1 = await fetch(currentUser);
 const chats = await response1.json();

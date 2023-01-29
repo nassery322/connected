@@ -6,14 +6,14 @@ import { auth } from './firebase';
 const Users = props => {
     const [usersData, setUsersData] = useState([])
     async function fetchData() {
-        const response = await fetch('https://connected-c86f2-default-rtdb.firebaseio.com/userdata.json');
+        const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/userdata.json`);
         const data = await response.json()
         let loadedData = [];
         
         for (const key in data) {
             const nestedData = data[key];
-const keys = Object.keys(nestedData);  // Get the keys of the object
-const firstKey = keys[0];  // Get the first key
+const keys = Object.keys(nestedData);  
+const firstKey = keys[0]; 
 const firstProperty = nestedData[firstKey];
 loadedData.push({
     id: key,
