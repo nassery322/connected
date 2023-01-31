@@ -46,7 +46,7 @@ useEffect( ()=>{
     file: ""
   });
 
-  // State to store the error messages
+  
   const [errors, setErrors] = useState({
     name: "",
     lastname: "",
@@ -56,11 +56,10 @@ useEffect( ()=>{
 
   });
 
-  // Function to handle form submission
   async function submitHandler(event) {
     event.preventDefault();
 
-    // Validate the form values
+    
     let hasErrors = false;
     if (formValues.name.trim() === "") {
       hasErrors = true;
@@ -117,7 +116,7 @@ useEffect( ()=>{
     }
     // ${user.user.uid}
 
-    // If there are no errors, submit the form
+    
     let userId;
     if (!hasErrors) {
       setIsLoading(true)
